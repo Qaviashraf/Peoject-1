@@ -1,0 +1,431 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.sec-1{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&w=1000&q=80);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: shrink 5s infinite alternate;
+}
+
+ @keyframes shrink{ 
+    0%{
+        background-size: 110%;
+    }
+    100%{
+        background-size: 100%;
+    }
+} 
+/*Navigation Bar*/
+header{
+    background-color: transparent;
+  }
+  li{
+    list-style: none;
+    font-weight: bold;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .logo{
+    height: 60px;
+    width: 120px;
+  }
+  .navbar{
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  }
+  .nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: #db4726;
+    padding: 10px 10px; 
+    border: 1px;
+    border-color: white;
+
+
+  }
+  .brand{
+   font-size: 6rem;
+  }
+  .nav-link{
+    transition: 0.7s ease;
+  }
+  .nav-link:hover{
+    
+    background-color: gray; 
+    padding: 10px 10px; 
+}
+  .hamburger{
+    display: none;
+    cursor: pointer;
+  }
+  .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in out;
+    background-color: white;
+  }
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top:70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: gray;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-iteams{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left:0;
+    }
+}
+/*Text Box*/
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 38px;
+    animation: backInLeft;
+    animation-duration: 1s;
+}
+.text-box h4{
+    font-size: 18px;
+    margin: 10px 0 40px;
+}
+/*Weekend Trips*/
+
+.weekend{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.weekend .row{ 
+    display: flex;
+     flex-wrap: wrap; 
+ } 
+.weekend h2{
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+.week-col{
+    float: left;
+    width: 32%;
+    padding: 5px;
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.week-col{
+    width: 100%;
+    display: block;
+}
+.row::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.layer{
+    background: transparent;
+    height:98.5%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 1;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+ } 
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+.layer p{
+    width: 95%;
+    font-size: 18px;
+    color: white;
+    bottom: 0;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover p{
+    bottom: 40%;
+    opacity: 1;
+}
+.subBtn {
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.subBtn:hover {
+    background-color: transparent;
+    color: black;
+}
+.sec-3 {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://media.wired.com/photos/60c25edfc99dc8c320fb6cf5/master/w_2560%2Cc_limit/Games-Road-Trip-Road96-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    /* padding-left: 50px; */
+
+}
+.sec-3 h1{
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    font-size: 60px;
+    width: fit-content;
+    padding: 10px;
+    margin-left: 30px;
+    /* animation: backInLeft;
+    animation-duration: 1s; */
+    /* bottom: 0;
+    opacity: 0; */
+    /* transition: 1s; */
+    left: 50%;
+    /* transform: translateX(-50%); */
+    /* position: absolute; */
+
+  }
+.sec-3:hover h1{
+    animation: backInLeft;
+    animation-duration: 1s;
+    /* bottom: 50%;
+    opacity: 1; */
+} 
+.sec-3 .text-3{
+    padding-left: 50%;
+    /* padding-bottom: 5%; */
+    /* margin-bottom: 80%; */
+    /* bottom: 100px; */
+}
+.sec-3 .text-3 h2{
+    font-weight: 800;
+    font-size: 60px;
+    width: fit-content;
+    /* padding: 10px; */
+    /* margin-left: 30px; */
+    /* color: black; */
+    /* justify-content: center; */
+}
+
+.sec-3 .text-3 p{
+    color: white;
+    font-size: 20px;
+    width: 70%;
+    padding-top: 10px;
+    justify-content: center;
+}
+.sec-3 .btn-deals{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 15%;
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-deals:hover {
+    background-color: gray;
+    color: black;
+}
+
+
+/*Footer*/
+
+.footer {
+    margin-top: 80px;
+    width: 100%;
+    padding: 50px 0px 50px 0px; 
+    background-color: gray;
+    color: white;
+  }
+
+.footer .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col{
+    width: 25%;
+    padding: 10px 160px;
+}
+footer div h3{
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    position: relative;
+
+}
+.col h3::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: red;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+
+}
+.col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s ease;
+}
+.col .social-links a:hover{
+    color: white;
+    background-color: gray;
+}*/
+
+/*responsive*/
+
+@media(max-width: 767px){
+    .sec-1{
+        animation: none;
+    }
+    .sec-1 .text-box h1 {
+        font-size: 5px;
+    }
+    .sec-1 .text-box h4 {
+        font-size: 14px;
+    }
+
+    .col {
+        width: 50%;
+        margin-bottom: 30px;
+        padding : 10px 40px;
+    }
+    .weekend .row{
+        display: inline;
+    }
+    .sec-3 .text-3{
+        padding-left: 10%;
+        padding-bottom: 80px;
+        /* margin-bottom: 30px; */
+    }
+    .sec-3 .text-3 h2{
+        font-size: 45px;
+    }
+    .sec-3 .text-3 .btn-deals{
+        width: 50%;
+   }
+}
+@media(max-width: 574px){
+    .sec-1{
+        animation: none;
+
+    }
+    .sec-1 .text-box h1 {
+        font-size: 26px;
+    }
+    .sec-1 .text-box h4 {
+        font-size: 18px;
+    }
+    .col{
+        width: 100%;
+        padding: 10px 30px;
+    }
+    .weekend .row{
+        display: inline;
+    }
+    .sec-3 .text-3{
+        padding-left: 10%;
+        padding-bottom: 80px;
+        /* margin-bottom: 30px; */
+    }
+    .sec-3 .text-3 h2{
+        font-size: 45px;
+    }
+    .sec-3 .text-3 .btn-deals{
+         width: 50%;
+    }
+
+}
